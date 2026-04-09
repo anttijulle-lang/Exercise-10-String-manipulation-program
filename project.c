@@ -105,3 +105,25 @@ void to_upper(char *str) {
         str[i] = (char)toupper((unsigned char)str[i]);
     }
 }
+
+void read_file(char *str) {
+    FILE *file = fopen("string.txt", "r");
+    
+    if (file == NULL) {
+        printf("File cannot be read\n");
+        return;
+    }
+
+    // Luetaan tiedoston sisältö muuttujaan str
+    if (fgets(str, 1000, file) != NULL) {
+        // Poistetaan mahdollinen rivinvaihto tiedoston lopusta
+        for (int i = 0; str[i] != '\0'; i++) {
+            if (str[i] == '\n') {
+                str[i] = '\0';
+                break;
+            }
+        }
+    }
+
+    fclose(file);
+}
