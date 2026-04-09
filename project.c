@@ -46,3 +46,34 @@ void display_menu(void) {
     printf("M) Display this menu\n");
     printf("X) Exit the program\n");
 }
+
+#include <stdio.h>
+#include <ctype.h> 
+void display_menu(void);
+void print_logo(void);
+int count_consonants(char *str);
+
+int count_consonants(char *str) {
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        char c = tolower(str[i]);
+        if (c >= 'a' && c <= 'z') {
+            // Jos se ei ole vokaali, sen on oltava konsonantti
+            if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'y') {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+int count_vowels(char *str) {
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        char c = tolower(str[i]);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y') {
+            count++;
+        }
+    }
+    return count;
+}
