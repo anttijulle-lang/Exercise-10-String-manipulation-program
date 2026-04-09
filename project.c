@@ -19,3 +19,30 @@ void display_menu(void) {
     printf("M) Display this menu\n");
     printf("X) Exit the program\n");
 }
+
+#include <stdio.h>
+
+void display_menu(void);
+void print_logo(void);
+
+void print_logo(void) {
+    printf("       _             ._.     \n");
+    printf(" _____| |___________ | |____ ____ \n");
+    printf("/  __  \\  __  __  \\|  \\   \\/  __ \\\n");
+    printf("\\_____  | |  |  |  |V  |   |  /  / >\n");
+    printf("/______ >_|  |_|  |____|  /\\____/ \n");
+    printf("      \\/               \\//______/ \n");
+}
+
+void display_menu(void) {
+    printf("A) Count the number of vowels in the string\n");
+    printf("B) Count the number of consonants in the string\n");
+    printf("C) Convert the string to uppercase\n");
+    printf("D) Convert the string to lowercase\n");
+    printf("E) Display the current string\n");
+    printf("F) Enter another string\n");
+    printf("G) Read string from file\n");
+    printf("H) Write string to file\n\n");
+    printf("M) Display this menu\n");
+    printf("X) Exit the program\n");
+}
