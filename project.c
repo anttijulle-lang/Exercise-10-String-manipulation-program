@@ -77,3 +77,19 @@ int count_vowels(char *str) {
     }
     return count;
 }
+
+void print_string(char *str) {
+    printf("%s\n", str);
+}
+
+void read_string(char *str) {
+    printf("Give string: ");
+täyttyy
+    fgets(str, 1000, stdin);
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == '\n') {
+            str[i] = '\0';
+            break;
+        }
+    }
+}
