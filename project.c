@@ -93,3 +93,15 @@ täyttyy
         }
     }
 }
+
+void to_lower(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = (char)tolower((unsigned char)str[i]);
+    }
+}
+
+void to_upper(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = (char)toupper((unsigned char)str[i]);
+    }
+}
